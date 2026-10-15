@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SOCIAL CLASSES | Bihar Board Coaching, Sarbahda Bazar | कक्षा 8–12</title>
+<title>SOCIAL CLASSES | Bihar Board Coaching, Sarbahda Bazar | Class 8–12</title>
 <meta name="description" content="SOCIAL CLASSES, Sarbahda Bazar (Near Honda Showroom), Bihar. Offline Bihar Board coaching for Classes 8–12. सीखो, समझो, आगे बढ़ो.">
 <meta property="og:type" content="website"><meta property="og:title" content="SOCIAL CLASSES | Bihar Board Coaching, Sarbahda Bazar"><meta property="og:description" content="सीखो, समझो, आगे बढ़ो. Classes 8–12, Bihar Board, offline coaching."><meta property="og:image" content="https://social-classes.vercel.app/logo.png"><meta property="og:url" content="https://social-classes.vercel.app/"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#123B7A">
 <link rel="icon" href="logo.png">
@@ -82,9 +82,42 @@ footer small{display:block;opacity:.75;margin-top:6px}
 @media(min-width:760px){.grid.d3{grid-template-columns:repeat(3,1fr)}.grid.d4{grid-template-columns:repeat(4,1fr)}.about{grid-template-columns:1fr 1fr;align-items:center}.hero .w{max-width:700px}.fab{display:none}footer{padding-bottom:32px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .i{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.22em;flex:none}.hb button .i{width:1.5em;height:1.5em}#menu .x .i{width:1.4em;height:1.4em}.empty .i{width:2.2em;height:2.2em;display:block;margin:0 auto 8px;color:var(--navy)}.stars .i{width:1.4em;height:1.4em;fill:currentColor;stroke:none}.btn .i{margin-right:6px}footer .l .i{margin-right:4px}.card .i{color:var(--navy)}.btn .i,.ft .i{color:inherit}.ft i .i{color:var(--navy)}
+
+/* ===== GLASS + 3D ===== */
+.orb{position:fixed;border-radius:50%;z-index:-1;pointer-events:none;animation:orb 14s ease-in-out infinite alternate}
+.o1{width:380px;height:380px;top:8%;left:-120px;background:radial-gradient(circle at 35% 35%,rgba(255,201,40,.5),rgba(255,201,40,0) 70%)}
+.o2{width:460px;height:460px;top:48%;right:-160px;background:radial-gradient(circle at 40% 40%,rgba(18,59,122,.35),rgba(18,59,122,0) 70%);animation-delay:-5s}
+.o3{width:300px;height:300px;bottom:2%;left:10%;background:radial-gradient(circle at 40% 40%,rgba(229,35,46,.18),rgba(229,35,46,0) 70%);animation-delay:-9s}
+@keyframes orb{to{transform:translate(40px,-50px) scale(1.12)}}
+body{background:linear-gradient(180deg,#eef3fb,#f8fafd 50%,#eaf0fa)}
+header{background:rgba(18,59,122,.78);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border-bottom:1px solid rgba(255,255,255,.18)}
+#menu{background:rgba(12,40,88,.9);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.card,details,.empty{background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(14px) saturate(170%);backdrop-filter:blur(14px) saturate(170%);border:1px solid rgba(255,255,255,.75);box-shadow:0 8px 28px rgba(18,59,122,.13),inset 0 1px 0 rgba(255,255,255,.8)}
+.empty{border:1.5px dashed rgba(18,59,122,.3)}
+.tilt{transition:transform .18s ease-out,box-shadow .2s}
+.tilt:hover{box-shadow:0 16px 36px rgba(18,59,122,.22),inset 0 1px 0 rgba(255,255,255,.9)}
+.rv{opacity:0;transform:perspective(800px) rotateX(16deg) translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.btn{box-shadow:0 4px 0 rgba(0,0,0,.2);transition:transform .12s,box-shadow .12s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.2)}
+.o{background:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.fab .btn{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hero{position:relative;overflow:hidden}
+.hero .w{margin:-36px auto 0;width:calc(100% - 24px);padding:6px 16px 22px;position:relative;background:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);border:1px solid rgba(255,255,255,.28);border-radius:22px;box-shadow:0 14px 40px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.35)}
+.scene{position:absolute;top:150px;right:26px;width:64px;height:64px;perspective:520px;pointer-events:none}
+.cube{width:100%;height:100%;position:relative;transform-style:preserve-3d;animation:spin 12s linear infinite}
+.cube b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 .95rem Mukta;color:#12294f;background:rgba(255,201,40,.72);border:1px solid rgba(255,255,255,.8);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);box-shadow:inset 0 0 14px rgba(255,255,255,.5)}
+.cube b:nth-child(1){transform:translateZ(32px)}.cube b:nth-child(2){transform:rotateY(90deg) translateZ(32px)}.cube b:nth-child(3){transform:rotateY(180deg) translateZ(32px)}.cube b:nth-child(4){transform:rotateY(270deg) translateZ(32px)}
+@keyframes spin{from{transform:rotateX(-18deg) rotateY(0)}to{transform:rotateX(-18deg) rotateY(360deg)}}
+.ft i{display:inline-block;animation:fl 3.4s ease-in-out infinite}
+.ft:nth-child(2n) i{animation-delay:-1.2s}.ft:nth-child(3n) i{animation-delay:-2.2s}
+@keyframes fl{50%{transform:translateY(-5px) rotate(-4deg)}}
+#lb{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+@media(prefers-reduced-motion:reduce){.orb,.cube,.ft i{animation:none}.rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
 <svg style="position:absolute;width:0;height:0" aria-hidden="true"><defs>
 <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
 <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
@@ -108,89 +141,90 @@ footer small{display:block;opacity:.75;margin-top:6px}
 </defs></svg>
 <header><div class="w hb">
 <img src="logo.png" alt="SOCIAL CLASSES logo"><div><b>SOCIAL CLASSES</b><small>Sarbahda Bazar (Near Honda Showroom)</small></div>
-<button id="mo" aria-label="मेनू खोलें" aria-expanded="false"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button></div></header>
+<button id="mo" aria-label="Menu खोलें" aria-expanded="false"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button></div></header>
 
 <div id="menu" role="dialog" aria-label="Menu">
-<button class="x" id="mx" aria-label="मेनू बंद करें"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
+<button class="x" id="mx" aria-label="Menu बंद करें"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
 <nav>
 <a href="#top">Home</a><a href="#notice">Notice Board</a><a href="#features">Our Features</a><a href="#teachers">Our Teachers</a><a href="#courses">Classes &amp; Courses</a><a href="#gallery">Gallery</a><a href="#resources">Study Resources</a><a href="#about">About Us</a><a href="#admission">Admission Enquiry</a><a href="#connect">Connect With Us</a><a href="#results">Students' Performance &amp; Results</a><a href="#feedback">Student &amp; Parent Feedback</a><a href="#faq">FAQ</a>
 </nav>
-<div class="mb"><a class="btn g" href="https://wa.me/917563040345?text=Namaste%2C%20mujhe%20SOCIAL%20CLASSES%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">WhatsApp Us</a><a class="btn o" href="tel:+917563040345">Call Now</a></div>
+<div class="mb"><a class="btn g" href="https://wa.me/917563040345?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20SOCIAL%20CLASSES%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4" target="_blank" rel="noopener">WhatsApp Us</a><a class="btn o" href="tel:+917563040345">Call Now</a></div>
 <p>Privacy Policy <span class="soon">Coming Soon</span> · Terms of Use <span class="soon">Coming Soon</span></p>
 </div>
 
 <main id="top">
 <div class="hero">
+<div class="scene" aria-hidden="true"><div class="cube"><b>सीखो</b><b>समझो</b><b>आगे</b><b>बढ़ो</b></div></div>
 <img class="ph" src="class1.jpg" alt="SOCIAL CLASSES ki classroom">
 <div class="w">
 <h1>सीखो, समझो, आगे बढ़ो</h1>
 <div class="en">Learn, Understand, Move Forward</div>
 <div class="tags"><span>Bihar Board</span><span>Classes 8–12</span><span>Offline Coaching</span></div>
-<p>सरबहदा बाज़ार में कॉन्सेप्ट-आधारित पढ़ाई, नियमित अभ्यास और सवाल पूछने की पूरी आज़ादी।</p>
+<p>Sarbahda Bazar में concept based पढ़ाई, regular practice और सवाल पूछने की पूरी आज़ादी।</p>
 <div class="row"><a class="btn y" href="#admission">Admission Enquiry</a><a class="btn o" href="#courses">Explore Classes</a></div>
 </div></div>
 
-<section id="notice"><div class="w"><h2>Latest Notices</h2><p class="sub">एडमिशन, परीक्षा और टेस्ट की जानकारी यहाँ मिलेगी।</p>
+<section id="notice"><div class="w"><h2>Latest Notices</h2><p class="sub">Admission, exam और test की जानकारी यहाँ मिलेगी।</p>
 <div id="notices"></div></div></section>
 
-<section id="features" style="background:#fff"><div class="w"><h2>Our Features</h2><p class="sub">Why choose SOCIAL CLASSES?</p>
+<section id="features"><div class="w"><h2>Our Features</h2><p class="sub">Why choose SOCIAL CLASSES?</p>
 <div class="grid d3">
 <div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-bulb"/></svg></i><div><b>Concept-Based Learning</b><span>रटने की जगह समझकर पढ़ाई।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-test"/></svg></i><div><b>Weekly Tests &amp; Practice</b><span>हर हफ़्ते टेस्ट और प्राइज़।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg></i><div><b>Daily Practice Questions (DPQ)</b><span>रोज़ अभ्यास के लिए सवाल।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-book"/></svg></i><div><b>Previous Year Question Practice</b><span>पिछले सालों के सवालों का अभ्यास।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-ask"/></svg></i><div><b>Freedom to Ask Questions</b><span>क्लास में खुलकर सवाल पूछो।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></i><div><b>Student Support</b><span>किफ़ायती और सहयोगी पढ़ाई।</span></div></div>
+<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-test"/></svg></i><div><b>Weekly Tests &amp; Practice</b><span>हर हफ़्ते test और prizes।</span></div></div>
+<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg></i><div><b>Daily Practice Questions (DPQ)</b><span>रोज़ practice के लिए questions।</span></div></div>
+<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-book"/></svg></i><div><b>Previous Year Question Practice</b><span>पिछले सालों के questions की practice।</span></div></div>
+<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-ask"/></svg></i><div><b>Freedom to Ask Questions</b><span>Class में खुलकर सवाल पूछो।</span></div></div>
+<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></i><div><b>Student Support</b><span>सस्ती और मददगार पढ़ाई।</span></div></div>
 </div></div></section>
 
-<section id="teachers"><div class="w"><h2>Our Teachers</h2><p class="sub">हमारी टीम</p>
+<section id="teachers"><div class="w"><h2>Our Teachers</h2><p class="sub">हमारी team</p>
 <div class="grid d4" id="tgrid"></div></div></section>
 
-<section id="courses" style="background:#fff"><div class="w"><h2>Classes &amp; Courses</h2><p class="sub">अपनी क्लास चुनो और एन्क्वायरी करो।</p>
+<section id="courses"><div class="w"><h2>Classes &amp; Courses</h2><p class="sub">अपनी class चुनो और enquiry करो।</p>
 <div class="grid d3">
-<div class="card c"><h3>Class 8</h3><p>Bihar Board. विषय: Math, Science, Social Science, Hindi, English, Sanskrit.</p><b>Contact for Fees</b><br><a class="btn n" href="#faq">View Details</a> <a class="btn y" href="#admission">Admission Enquiry</a></div>
-<div class="card c"><h3>Class 9–10</h3><p>Bihar Board. बोर्ड-परीक्षा की तैयारी, साप्ताहिक टेस्ट और PYQ अभ्यास।</p><b>Contact for Fees</b><br><a class="btn n" href="#faq">View Details</a> <a class="btn y" href="#admission">Admission Enquiry</a></div>
-<div class="card c"><h3>Class 11–12</h3><p>Science, Commerce और Arts स्ट्रीम।</p><b>Contact for Fees</b><br><a class="btn n" href="#faq">View Details</a> <a class="btn y" href="#admission">Admission Enquiry</a></div>
-</div><p class="sub" style="margin-top:12px">विषयवार जानकारी के लिए संस्थान से संपर्क करें।</p></div></section>
+<div class="card c"><h3>Class 8</h3><p>Bihar Board. Subjects: Math, Science, Social Science, Hindi, English, Sanskrit.</p><b>Contact for Fees</b><br><a class="btn n" href="#faq">View Details</a> <a class="btn y" href="#admission">Admission Enquiry</a></div>
+<div class="card c"><h3>Class 9–10</h3><p>Bihar Board. Board exam की तैयारी, weekly test और PYQ practice।</p><b>Contact for Fees</b><br><a class="btn n" href="#faq">View Details</a> <a class="btn y" href="#admission">Admission Enquiry</a></div>
+<div class="card c"><h3>Class 11–12</h3><p>Science, Commerce और Arts stream।</p><b>Contact for Fees</b><br><a class="btn n" href="#faq">View Details</a> <a class="btn y" href="#admission">Admission Enquiry</a></div>
+</div><p class="sub" style="margin-top:12px">Subject की पूरी जानकारी के लिए institute से contact करें।</p></div></section>
 
-<section id="gallery"><div class="w"><h2>Gallery</h2><p class="sub">हमारे संस्थान के पल।</p>
+<section id="gallery"><div class="w"><h2>Gallery</h2><p class="sub">हमारे institute के यादगार पल।</p>
 <div class="pill" id="gf"><button class="on" data-c="all">All</button><button data-c="Classroom">Classroom</button><button data-c="Teaching">Teaching Activities</button></div>
 <div class="grid gal" id="gg"></div></div></section>
 
-<section id="resources" style="background:#fff"><div class="w"><h2>Study Resources</h2><p class="sub">नोट्स, PDF, प्रैक्टिस प्रश्न और पिछले वर्षों के प्रश्न।</p>
+<section id="resources"><div class="w"><h2>Study Resources</h2><p class="sub">Notes, PDF, practice questions और पिछले सालों के questions।</p>
 <div class="pill"><button class="on">All</button><button>Notes</button><button>PDFs</button><button>Practice</button><button>PYQ</button></div>
-<div class="empty"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>स्टडी रिसोर्सेज़ जल्द अपलोड होंगे।<br>अभी जानकारी के लिए संस्थान से संपर्क करें।</div></div></section>
+<div class="empty"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Study resources जल्द upload होंगे।<br>अभी जानकारी के लिए institute से contact करें।</div></div></section>
 
 <section id="about"><div class="w"><h2>About SOCIAL CLASSES</h2><div class="about">
-<img src="class2.jpg" alt="Classroom mein students" loading="lazy">
+<img src="class2.jpg" alt="Students in the SOCIAL CLASSES classroom" loading="lazy">
 <div><p><b>ESTD. 2016</b> · Sarbahda Bazar (Near Honda Showroom), Bihar</p><br>
 <p><b>सीखो, समझो, आगे बढ़ो</b><br>Learn, Understand, Move Forward</p><br>
-<p>SOCIAL CLASSES एक ऑफ़लाइन कोचिंग संस्थान है, जहाँ Bihar Board के छात्रों को कॉन्सेप्ट-आधारित पढ़ाई, नियमित अभ्यास और सवाल पूछने की आज़ादी दी जाती है। "हम पढ़ाते नहीं, सिखाते हैं."</p><br><div id="location"><p><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg> <b>Our Location</b> <span class="soon">Coming Soon</span><br>Sarbahda Bazar (Near Honda Showroom)</p><div class="map" style="margin-top:8px">Google Maps: Coming Soon</div></div></div></div></div></section>
+<p>SOCIAL CLASSES एक offline coaching institute है, जहाँ Bihar Board के students को concept आधारित पढ़ाई, regular practice और सवाल पूछने की आज़ादी दी जाती है। "हम पढ़ाते नहीं, सिखाते हैं."</p><br><div id="location"><p><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg> <b>Our Location</b> <span class="soon">Coming Soon</span><br>Sarbahda Bazar (Near Honda Showroom)</p><div class="map" style="margin-top:8px">Google Maps: Coming Soon</div></div></div></div></div></section>
 
-<section id="results" style="background:#fff"><div class="w"><h2>Students' Performance &amp; Results</h2>
+<section id="results"><div class="w"><h2>Students' Performance &amp; Results</h2>
 <div class="pill"><button class="on">Student Achievers</button><button>Previous Years' Results</button></div>
-<div class="empty"><svg class="i" aria-hidden="true"><use href="#i-trophy"/></svg>सत्यापित (verified) रिज़ल्ट जल्द यहाँ दिखाए जाएँगे।<br>क्लास और वर्ष के फ़िल्टर तब चालू होंगे।</div></div></section>
+<div class="empty"><svg class="i" aria-hidden="true"><use href="#i-trophy"/></svg>Verified results जल्द यहाँ दिखाए जाएँगे।<br>Class और year के filters तब चालू होंगे।</div></div></section>
 
 <section id="feedback"><div class="w"><h2>Student &amp; Parent Feedback</h2>
-<p class="sub">अभी कोई प्रकाशित फ़ीडबैक नहीं है। आप पहले बन सकते हैं।</p>
+<p class="sub">अभी कोई feedback नहीं है। आप पहले बन सकते हैं।</p>
 <form class="card" id="ff" novalidate>
 <label>Rating</label><div class="stars" id="st"><button type="button" aria-label="1 star"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="2 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="3 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="4 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="5 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button></div><div class="err" id="fe0"></div>
 <label for="fn">Name (optional)</label><input id="fn" name="name">
 <label for="fm">Message</label><textarea id="fm" name="message" rows="3"></textarea><div class="err" id="fe1"></div>
 <br><button class="btn n" type="submit" id="fb">Submit Feedback</button>
-<div class="ok" id="fo">धन्यवाद! आपका फ़ीडबैक समीक्षा के बाद ही दिखाया जाएगा।</div></form></div></section>
+<div class="ok" id="fo">धन्यवाद! आपका feedback check होने के बाद ही दिखाया जाएगा।</div></form></div></section>
 
-<section id="faq" style="background:#fff"><div class="w"><h2>FAQ</h2><p class="sub">Aksar puchhe jaane wale sawal</p>
-<details><summary>Which classes are available?</summary><p>कक्षा 8 से 12 तक, Bihar Board।</p></details>
-<details><summary>Which streams are available in Classes 11–12?</summary><p>Science, Commerce और Arts।</p></details>
-<details><summary>How can I enquire about fees?</summary><p>फ़ीस की जानकारी के लिए Call Now या WhatsApp Us से संपर्क करें, या Admission Enquiry फ़ॉर्म भरें।</p></details>
-<details><summary>How do I apply for admission?</summary><p>Admission Enquiry फ़ॉर्म भरें या संस्थान (Sarbahda Bazar, Near Honda Showroom) आएँ।</p></details>
-<details><summary>Are study resources available?</summary><p>Study Resources सेक्शन जल्द शुरू होगा। अभी संस्थान से पूछें।</p></details>
-<details><summary>How can I contact the institute?</summary><p>WhatsApp या कॉल करें: 7563040345 · 8757804737।</p></details>
-<details><summary>Are online classes available?</summary><p>नहीं। अभी SOCIAL CLASSES केवल ऑफ़लाइन कोचिंग देता है।</p></details>
+<section id="faq"><div class="w"><h2>FAQ</h2><p class="sub">अक्सर पूछे जाने वाले सवाल</p>
+<details><summary>कौन-कौन सी classes उपलब्ध हैं?</summary><p>Class 8 से 12 तक, Bihar Board।</p></details>
+<details><summary>Class 11–12 में कौन-कौन से streams हैं?</summary><p>Science, Commerce और Arts।</p></details>
+<details><summary>Fees के बारे में कैसे पूछें?</summary><p>Fees जानने के लिए Call Now या WhatsApp Us करें, या Admission Enquiry form भरें।</p></details>
+<details><summary>Admission के लिए कैसे apply करें?</summary><p>Admission Enquiry form भरें या institute (Sarbahda Bazar, Near Honda Showroom) आ जाएँ।</p></details>
+<details><summary>क्या study resources मिलते हैं?</summary><p>Study Resources section जल्द शुरू होगा। अभी institute से पूछें।</p></details>
+<details><summary>Institute से contact कैसे करें?</summary><p>WhatsApp या call करें: 7563040345 · 8757804737।</p></details>
+<details><summary>क्या online classes हैं?</summary><p>नहीं। अभी SOCIAL CLASSES सिर्फ़ offline coaching देता है।</p></details>
 </div></section>
 
-<section id="admission"><div class="w"><h2>Admission Enquiry</h2><p class="sub">फ़ॉर्म भरें। आपकी एन्क्वायरी हम तक पहुँच जाएगी।</p>
+<section id="admission"><div class="w"><h2>Admission Enquiry</h2><p class="sub">Form भरें। आपकी enquiry हम तक पहुँच जाएगी।</p>
 <form class="card" id="af" novalidate>
 <input type="hidden" name="subject" value="New Admission Enquiry - SOCIAL CLASSES">
 <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
@@ -201,10 +235,10 @@ footer small{display:block;opacity:.75;margin-top:6px}
 <div id="sw" style="display:none"><label for="sm">Stream *</label><select id="sm" name="stream"><option value="">Select stream</option><option>Science</option><option>Commerce</option><option>Arts</option></select><div class="err" id="e5"></div></div>
 <label for="ms">Message (optional)</label><textarea id="ms" name="message" rows="3"></textarea>
 <br><button class="btn y" type="submit" id="ab" style="width:100%">Submit Enquiry</button>
-<div class="ok" id="ao">धन्यवाद! आपकी एन्क्वायरी भेज दी गई है। WhatsApp भी खुल रहा है, वहाँ मैसेज भेज दें।</div>
+<div class="ok" id="ao">धन्यवाद! आपकी enquiry भेज दी गई है। WhatsApp भी खुल रहा है, वहाँ message भेज दें।</div>
 <div class="err" id="ae"></div></form></div></section>
 
-<section id="connect" style="background:#fff"><div class="w"><h2>Connect With Us</h2>
+<section id="connect"><div class="w"><h2>Connect With Us</h2>
 <div class="soc"><a class="btn n" href="https://youtube.com/@socialclassessarbahda?si=1hZmM_ce75Ftoz5w" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-yt"/></svg>YouTube</a><a class="btn n" href="https://instagram.com/social_classes_4297?xtok=eHRxM3ZneGg4NHhr" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a><a class="btn n" href="https://www.facebook.com/NirajKumar4297?mibextid=ZbWKwL" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a><a class="btn g" href="https://wa.me/917563040345" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></div>
 <div class="card" style="margin-top:14px"><b>Contact</b><br><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> <a href="tel:+917563040345">7563040345</a> · <a href="tel:+918757804737">8757804737</a><br><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg> <a href="mailto:subodhpremicontact@gmail.com">subodhpremicontact@gmail.com</a><br><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg> Sarbahda Bazar (Near Honda Showroom)</div></div></section>
 
@@ -220,7 +254,7 @@ footer small{display:block;opacity:.75;margin-top:6px}
 <small>Privacy Policy — Coming Soon · Terms of Use — Coming Soon</small>
 </div></footer>
 
-<div class="fab"><a class="btn g" href="https://wa.me/917563040345?text=Namaste%2C%20mujhe%20SOCIAL%20CLASSES%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">WhatsApp Us</a><a class="btn n" href="tel:+917563040345">Call Now</a></div>
+<div class="fab"><a class="btn g" href="https://wa.me/917563040345?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20SOCIAL%20CLASSES%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4" target="_blank" rel="noopener">WhatsApp Us</a><a class="btn n" href="tel:+917563040345">Call Now</a></div>
 
 <div id="lb" role="dialog" aria-label="Photo viewer"><img id="li" alt=""><p id="lc" style="color:#fff"></p><div><button id="lp">‹ Prev</button><button id="ln">Next ›</button><button id="lx">Close</button></div></div>
 
@@ -243,10 +277,10 @@ $("mo").onclick=function(){tm(true)};$("mx").onclick=function(){tm(false)};
 document.querySelectorAll("#menu nav a").forEach(function(a){a.onclick=function(){tm(false)}});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){tm(false);$("lb").classList.remove("open")}});
 // notices
-$("notices").innerHTML=NOTICES.length?NOTICES.map(function(x){return '<div class="card" style="margin-bottom:10px"><b>'+(x.pinned?'<span class="soon">Pinned</span> ':'')+x.title+'</b><br><small>'+x.date+'</small><p>'+x.desc+'</p></div>'}).join(""):'<div class="empty"><svg class="i" aria-hidden="true"><use href="#i-mega"/></svg>अभी कोई नोटिस नहीं है।<br>नए नोटिस यहाँ दिखेंगे।</div>';
+$("notices").innerHTML=NOTICES.length?NOTICES.map(function(x){return '<div class="card" style="margin-bottom:10px"><b>'+(x.pinned?'<span class="soon">Pinned</span> ':'')+x.title+'</b><br><small>'+x.date+'</small><p>'+x.desc+'</p></div>'}).join(""):'<div class="empty"><svg class="i" aria-hidden="true"><use href="#i-mega"/></svg>अभी कोई notice नहीं है।<br>नए notices यहाँ दिखेंगे।</div>';
 // teachers
-var av='<svg viewBox="0 0 100 100" role="img" aria-label="फ़ोटो जल्द"><rect width="100" height="100" fill="#dbe5f5"/><circle cx="50" cy="38" r="18" fill="#9fb3d6"/><path d="M14 100c0-24 16-36 36-36s36 12 36 36z" fill="#9fb3d6"/></svg>';
-$("tgrid").innerHTML=TEACHERS.map(function(t){return '<div class="card t">'+(t.img?'<img src="'+t.img+'" alt="'+t.n+'" loading="lazy">':av)+'<b>'+t.n+'</b><small>'+t.s+'</small><small>'+t.d+'</small><button class="btn n" onclick="alert(\''+t.n+' ('+t.d+')\\n'+t.s+'\\n\\nप्रोफ़ाइल की जानकारी जल्द अपडेट होगी।\')">View Profile</button></div>'}).join("");
+var av='<svg viewBox="0 0 100 100" role="img" aria-label="Photo जल्द आएगी"><rect width="100" height="100" fill="#dbe5f5"/><circle cx="50" cy="38" r="18" fill="#9fb3d6"/><path d="M14 100c0-24 16-36 36-36s36 12 36 36z" fill="#9fb3d6"/></svg>';
+$("tgrid").innerHTML=TEACHERS.map(function(t){return '<div class="card t">'+(t.img?'<img src="'+t.img+'" alt="'+t.n+'" loading="lazy">':av)+'<b>'+t.n+'</b><small>'+t.s+'</small><small>'+t.d+'</small><button class="btn n" onclick="alert(\''+t.n+' ('+t.d+')\\n'+t.s+'\\n\\nProfile की जानकारी जल्द update होगी।\')">View Profile</button></div>'}).join("");
 // gallery
 var cur=0,list=PHOTOS;
 function rg(c){list=PHOTOS.filter(function(p){return c==="all"||p.cat===c});$("gg").innerHTML=list.map(function(p,i){return '<figure><img src="'+p.src+'" alt="'+p.cap+'" loading="lazy" onclick="ol('+i+')"><figcaption>'+p.cap+'</figcaption></figure>'}).join("")}
@@ -261,19 +295,19 @@ var rating=0,sb=$("st").querySelectorAll("button");
 sb.forEach(function(b,i){b.onclick=function(){rating=i+1;sb.forEach(function(x,j){x.classList.toggle("on",j<=i)})}});
 // forms
 function send(fd,cb){
- if(WEB3FORMS_KEY.indexOf("YOUR_")===0){cb(false,"फ़ॉर्म अभी कनेक्ट नहीं है। कृपया WhatsApp या Call करें।");return}
+ if(WEB3FORMS_KEY.indexOf("YOUR_")===0){cb(false,"Form अभी connect नहीं है। कृपया WhatsApp या Call करें।");return}
  fd.append("access_key",WEB3FORMS_KEY);
- fetch("https://api.web3forms.com/submit",{method:"POST",body:fd}).then(function(r){return r.json()}).then(function(j){cb(j.success,j.message)}).catch(function(){cb(false,"नेटवर्क में दिक्कत है। दोबारा कोशिश करें।")});
+ fetch("https://api.web3forms.com/submit",{method:"POST",body:fd}).then(function(r){return r.json()}).then(function(j){cb(j.success,j.message)}).catch(function(){cb(false,"Network में दिक्कत है। दोबारा try करें।")});
 }
 $("cl").onchange=function(){$("sw").style.display=(this.value==="Class 11"||this.value==="Class 12")?"block":"none"};
 $("af").onsubmit=function(e){
  e.preventDefault();var ok=true;
  function chk(id,eid,bad,msg){$(eid).textContent=bad?msg:"";if(bad)ok=false}
- chk("sn","e1",!$("sn").value.trim(),"छात्र का नाम लिखें।");
- chk("pn","e2",!$("pn").value.trim(),"अभिभावक का नाम लिखें।");
- chk("mn","e3",!/^[6-9]\d{9}$/.test($("mn").value.trim()),"10 अंकों का सही मोबाइल नंबर लिखें।");
- chk("cl","e4",!$("cl").value,"क्लास चुनें।");
- var s11=$("sw").style.display==="block";chk("sm","e5",s11&&!$("sm").value,"स्ट्रीम चुनें।");
+ chk("sn","e1",!$("sn").value.trim(),"Student का नाम लिखें।");
+ chk("pn","e2",!$("pn").value.trim(),"Parent/Guardian का नाम लिखें।");
+ chk("mn","e3",!/^[6-9]\d{9}$/.test($("mn").value.trim()),"10 digit का सही mobile number लिखें।");
+ chk("cl","e4",!$("cl").value,"Class चुनें।");
+ var s11=$("sw").style.display==="block";chk("sm","e5",s11&&!$("sm").value,"Stream चुनें।");
  if(!ok)return;
  var b=$("ab");b.disabled=true;b.textContent="भेज रहे हैं...";$("ae").textContent="";
  var fd=new FormData($("af"));
@@ -281,18 +315,34 @@ $("af").onsubmit=function(e){
  send(fd,function(s,m){
   b.disabled=false;b.textContent="Submit Enquiry";
   if(s){$("ao").style.display="block";$("af").reset();$("sw").style.display="none";window.open("https://wa.me/"+WA+"?text="+msg,"_blank")}
-  else{$("ae").innerHTML=(m||"एन्क्वायरी नहीं जा सकी।")+' <a href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener"><b>WhatsApp पर भेजें</b></a>'}
+  else{$("ae").innerHTML=(m||"Enquiry नहीं जा सकी।")+' <a href="https://wa.me/'+WA+'?text='+msg+'" target="_blank" rel="noopener"><b>WhatsApp पर भेजें</b></a>'}
  });
 };
 $("ff").onsubmit=function(e){
  e.preventDefault();var ok=true;
- $("fe0").textContent=rating?"":"रेटिंग चुनें।";$("fe1").textContent=$("fm").value.trim()?"":"मैसेज लिखें।";
+ $("fe0").textContent=rating?"":"Rating चुनें।";$("fe1").textContent=$("fm").value.trim()?"":"Message लिखें।";
  if(!rating||!$("fm").value.trim())return;
  var b=$("fb");b.disabled=true;b.textContent="भेज रहे हैं...";
  var fd=new FormData($("ff"));fd.append("subject","Feedback (PENDING REVIEW) - SOCIAL CLASSES");fd.append("rating",rating+"/5");
  send(fd,function(s,m){b.disabled=false;b.textContent="Submit Feedback";
   if(s){$("fo").style.display="block";$("ff").reset();sb.forEach(function(x){x.classList.remove("on")});rating=0}else{$("fe1").textContent=m}});
 };
+
+// ===== 3D / glass effects =====
+(function(){
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add('in');io.unobserve(t);setTimeout(function(){t.classList.remove('rv','in');t.style.transitionDelay=''},900)}})},{threshold:.1});
+  document.querySelectorAll('.card,.empty,details,.gal figure').forEach(function(e,i){e.classList.add('rv');e.style.transitionDelay=(i%3)*70+'ms';io.observe(e)});
+ }
+ if(matchMedia('(hover:hover)').matches){
+  document.querySelectorAll('.card:not(form)').forEach(function(c){
+   c.classList.add('tilt');
+   c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(700px) rotateX('+(-y*8)+'deg) rotateY('+(x*8)+'deg) translateZ(6px)'});
+   c.addEventListener('pointerleave',function(){c.style.transform=''});
+  });
+ }
+})();
 </script>
 </body>
 </html>
