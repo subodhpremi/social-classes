@@ -81,7 +81,7 @@ footer small{display:block;opacity:.75;margin-top:6px}
 .fab{position:fixed;bottom:12px;left:12px;right:12px;display:flex;gap:10px;z-index:20}.fab .btn{flex:1;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 @media(min-width:760px){.grid.d3{grid-template-columns:repeat(3,1fr)}.grid.d4{grid-template-columns:repeat(4,1fr)}.about{grid-template-columns:1fr 1fr;align-items:center}.hero .w{max-width:700px}.fab{display:none}footer{padding-bottom:32px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.i{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.22em;flex:none}.hb button .i{width:1.5em;height:1.5em}#menu .x .i{width:1.4em;height:1.4em}.empty .i{width:2.2em;height:2.2em;display:block;margin:0 auto 8px;color:var(--navy)}.stars .i{width:1.4em;height:1.4em;fill:currentColor;stroke:none}.btn .i{margin-right:6px}footer .l .i{margin-right:4px}.card .i{color:var(--navy)}.btn .i,.ft .i{color:inherit}.ft i .i{color:var(--navy)}
+.i{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.22em;flex:none}.hb button .i{width:1.5em;height:1.5em}#menu .x .i{width:1.4em;height:1.4em}.empty .i{width:2.2em;height:2.2em;display:block;margin:0 auto 8px;color:var(--navy)}.stars .i{width:1.5em;height:1.5em;fill:none;stroke:#8a9bb8;stroke-width:1.6}.stars button.on .i{fill:var(--yel);stroke:#d9a400}.btn .i{margin-right:6px}footer .l .i{margin-right:4px}.card .i{color:var(--navy)}.btn .i,.ft .i{color:inherit}.ft i .i{color:var(--navy)}
 
 /* ===== GLASS + 3D ===== */
 .orb{position:fixed;border-radius:50%;z-index:-1;pointer-events:none;animation:orb 14s ease-in-out infinite alternate}
@@ -104,16 +104,28 @@ header{background:rgba(18,59,122,.78);-webkit-backdrop-filter:blur(14px) saturat
 .fab .btn{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .hero{position:relative;overflow:hidden}
 .hero .w{margin:-36px auto 0;width:calc(100% - 24px);padding:6px 16px 22px;position:relative;background:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);border:1px solid rgba(255,255,255,.28);border-radius:22px;box-shadow:0 14px 40px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.35)}
-.scene{position:absolute;top:150px;right:26px;width:64px;height:64px;perspective:520px;pointer-events:none}
-.cube{width:100%;height:100%;position:relative;transform-style:preserve-3d;animation:spin 12s linear infinite}
-.cube b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 .95rem Mukta;color:#12294f;background:rgba(255,201,40,.72);border:1px solid rgba(255,255,255,.8);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);box-shadow:inset 0 0 14px rgba(255,255,255,.5)}
-.cube b:nth-child(1){transform:translateZ(32px)}.cube b:nth-child(2){transform:rotateY(90deg) translateZ(32px)}.cube b:nth-child(3){transform:rotateY(180deg) translateZ(32px)}.cube b:nth-child(4){transform:rotateY(270deg) translateZ(32px)}
-@keyframes spin{from{transform:rotateX(-18deg) rotateY(0)}to{transform:rotateX(-18deg) rotateY(360deg)}}
 .ft i{display:inline-block;animation:fl 3.4s ease-in-out infinite}
 .ft:nth-child(2n) i{animation-delay:-1.2s}.ft:nth-child(3n) i{animation-delay:-2.2s}
 @keyframes fl{50%{transform:translateY(-5px) rotate(-4deg)}}
 #lb{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 @media(prefers-reduced-motion:reduce){.orb,.cube,.ft i{animation:none}.rv{opacity:1;transform:none;transition:none}}
+
+/* ===== v4 fixes ===== */
+header{background:var(--navy);-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:3px solid var(--yel)}
+.hero{padding-bottom:30px}
+.phw{position:relative;height:300px;overflow:hidden}
+.phw img{width:100%;height:100%;object-fit:cover;object-position:60% 55%;transform:scale(1.22);transform-origin:58% 62%}
+.fade{position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(transparent,#0d2d5e)}
+.hero .w{margin:-24px auto 0}
+#fgrid{grid-template-columns:1fr}
+.flip{perspective:900px;height:108px;cursor:pointer}
+.fi{position:relative;height:100%;transform-style:preserve-3d;transition:transform .6s}
+.flip.on .fi{transform:rotateY(180deg)}
+.ff,.fb{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;align-items:center;gap:12px;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.ff{background:rgba(255,255,255,.9)}
+.fb{transform:rotateY(180deg);background:var(--navy);color:#fff;border-color:var(--navy);font-weight:600;justify-content:center;text-align:center}
+@media(min-width:760px){#fgrid{grid-template-columns:repeat(3,1fr)}.phw{height:380px}}
+@media(prefers-reduced-motion:reduce){.fi{transition:none}}
 </style>
 </head>
 <body>
@@ -154,8 +166,7 @@ header{background:rgba(18,59,122,.78);-webkit-backdrop-filter:blur(14px) saturat
 
 <main id="top">
 <div class="hero">
-<div class="scene" aria-hidden="true"><div class="cube"><b>सीखो</b><b>समझो</b><b>आगे</b><b>बढ़ो</b></div></div>
-<img class="ph" src="class1.jpg" alt="SOCIAL CLASSES ki classroom">
+<div class="phw"><img src="class1.jpg" alt="Niraj Sir with students in the SOCIAL CLASSES classroom"><div class="fade"></div></div>
 <div class="w">
 <h1>सीखो, समझो, आगे बढ़ो</h1>
 <div class="en">Learn, Understand, Move Forward</div>
@@ -167,15 +178,8 @@ header{background:rgba(18,59,122,.78);-webkit-backdrop-filter:blur(14px) saturat
 <section id="notice"><div class="w"><h2>Latest Notices</h2><p class="sub">Admission, exam और test की जानकारी यहाँ मिलेगी।</p>
 <div id="notices"></div></div></section>
 
-<section id="features"><div class="w"><h2>Our Features</h2><p class="sub">Why choose SOCIAL CLASSES?</p>
-<div class="grid d3">
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-bulb"/></svg></i><div><b>Concept-Based Learning</b><span>रटने की जगह समझकर पढ़ाई।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-test"/></svg></i><div><b>Weekly Tests &amp; Practice</b><span>हर हफ़्ते test और prizes।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg></i><div><b>Daily Practice Questions (DPQ)</b><span>रोज़ practice के लिए questions।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-book"/></svg></i><div><b>Previous Year Question Practice</b><span>पिछले सालों के questions की practice।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-ask"/></svg></i><div><b>Freedom to Ask Questions</b><span>Class में खुलकर सवाल पूछो।</span></div></div>
-<div class="card ft"><i><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></i><div><b>Student Support</b><span>सस्ती और मददगार पढ़ाई।</span></div></div>
-</div></div></section>
+<section id="features"><div class="w"><h2>Our Features</h2><p class="sub">Why choose SOCIAL CLASSES? Card पर tap करो।</p>
+<div class="grid" id="fgrid"></div></div></section>
 
 <section id="teachers"><div class="w"><h2>Our Teachers</h2><p class="sub">हमारी team</p>
 <div class="grid d4" id="tgrid"></div></div></section>
@@ -192,7 +196,7 @@ header{background:rgba(18,59,122,.78);-webkit-backdrop-filter:blur(14px) saturat
 <div class="grid gal" id="gg"></div></div></section>
 
 <section id="resources"><div class="w"><h2>Study Resources</h2><p class="sub">Notes, PDF, practice questions और पिछले सालों के questions।</p>
-<div class="pill"><button class="on">All</button><button>Notes</button><button>PDFs</button><button>Practice</button><button>PYQ</button></div>
+<div class="pill"><button class="on">All</button><button>Notes</button><button>PDFs</button><button>Practice</button><button>PYQ</button><button>Others</button></div>
 <div class="empty"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Study resources जल्द upload होंगे।<br>अभी जानकारी के लिए institute से contact करें।</div></div></section>
 
 <section id="about"><div class="w"><h2>About SOCIAL CLASSES</h2><div class="about">
@@ -208,7 +212,7 @@ header{background:rgba(18,59,122,.78);-webkit-backdrop-filter:blur(14px) saturat
 <section id="feedback"><div class="w"><h2>Student &amp; Parent Feedback</h2>
 <p class="sub">अभी कोई feedback नहीं है। आप पहले बन सकते हैं।</p>
 <form class="card" id="ff" novalidate>
-<label>Rating</label><div class="stars" id="st"><button type="button" aria-label="1 star"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="2 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="3 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="4 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="5 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button></div><div class="err" id="fe0"></div>
+<label>Rating</label><div class="stars" id="st"><button type="button" aria-label="1 star"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="2 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="3 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="4 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button><button type="button" aria-label="5 stars"><svg class="i" aria-hidden="true"><use href="#i-star"/></svg></button></div><div id="rt" style="font-weight:600;color:var(--navy);min-height:1.4em"></div><div class="err" id="fe0"></div>
 <label for="fn">Name (optional)</label><input id="fn" name="name">
 <label for="fm">Message</label><textarea id="fm" name="message" rows="3"></textarea><div class="err" id="fe1"></div>
 <br><button class="btn n" type="submit" id="fb">Submit Feedback</button>
@@ -265,10 +269,10 @@ var WA="917563040345";
 // ===== DATA (baad mein database se judega) =====
 var NOTICES=[]; // {title,date,desc,pinned,link}
 var TEACHERS=[
- {n:"Niraj Sir",d:"Director",s:"Mathematics",img:"niraj-sir.jpg"},
- {n:"Vikas Sir",d:"Managing Director",s:"Hindi, Sanskrit, English & Grammar"},
- {n:"Shivnarayan Sir",d:"Faculty",s:"Science"},
- {n:"Satpal Sir",d:"Faculty",s:"Social Science"}];
+ {n:"Niraj Sir",d:"Director",s:"Mathematics",img:"niraj-sir.png"},
+ {n:"Vikas Sir",d:"Managing Director",s:"Hindi, Sanskrit, English & Grammar",img:"vikas-sir.png"},
+ {n:"Shivnarayan Sir",d:"Faculty",s:"Science",img:"shivnarayan-sir.png"},
+ {n:"Satpal Sir",d:"Faculty",s:"Social Science",img:"satpal-sir.png"}];
 var PHOTOS=[{src:"class1.jpg",cap:"Classroom session",cat:"Classroom"},{src:"class2.jpg",cap:"Teaching activity",cat:"Teaching"}];
 var $=function(i){return document.getElementById(i)};
 // menu
@@ -278,9 +282,13 @@ document.querySelectorAll("#menu nav a").forEach(function(a){a.onclick=function(
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){tm(false);$("lb").classList.remove("open")}});
 // notices
 $("notices").innerHTML=NOTICES.length?NOTICES.map(function(x){return '<div class="card" style="margin-bottom:10px"><b>'+(x.pinned?'<span class="soon">Pinned</span> ':'')+x.title+'</b><br><small>'+x.date+'</small><p>'+x.desc+'</p></div>'}).join(""):'<div class="empty"><svg class="i" aria-hidden="true"><use href="#i-mega"/></svg>अभी कोई notice नहीं है।<br>नए notices यहाँ दिखेंगे।</div>';
+var FEATS=[["bulb","Concept-Based Learning","रटने की जगह समझकर पढ़ाई।","पहले concept समझो, फिर सवाल हल करो।"],["test","Weekly Tests & Practice","हर हफ़्ते test और prizes।","हर हफ़्ते test देकर अपनी तैयारी check करो।"],["cal","Daily Practice Questions (DPQ)","रोज़ practice के लिए questions।","हर दिन कुछ सवाल, ताकि practice रोज़ होती रहे।"],["book","Previous Year Question Practice","पिछले सालों के questions की practice।","पिछले सालों के questions से exam समझो।"],["ask","Freedom to Ask Questions","Class में खुलकर सवाल पूछो।","कोई doubt हो तो class में ही पूछ सकते हो।"],["users","Student Support","सस्ती और मददगार पढ़ाई।","Affordable पढ़ाई और student को पूरा support।"]];
+function ic(n){return '<svg class="i" aria-hidden="true"><use href="#i-'+n+'"/></svg>'}
+$("fgrid").innerHTML=FEATS.map(function(f){return '<div class="flip" tabindex="0" role="button" aria-label="'+f[1]+' - tap karke detail dekho"><div class="fi"><div class="ff card"><i>'+ic(f[0])+'</i><div><b>'+f[1]+'</b><span>'+f[2]+'</span></div></div><div class="fb card"><span>'+f[3]+'</span></div></div></div>'}).join("");
+document.querySelectorAll(".flip").forEach(function(c){c.onclick=function(){c.classList.toggle("on")};c.onkeydown=function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();c.classList.toggle("on")}}});
 // teachers
 var av='<svg viewBox="0 0 100 100" role="img" aria-label="Photo जल्द आएगी"><rect width="100" height="100" fill="#dbe5f5"/><circle cx="50" cy="38" r="18" fill="#9fb3d6"/><path d="M14 100c0-24 16-36 36-36s36 12 36 36z" fill="#9fb3d6"/></svg>';
-$("tgrid").innerHTML=TEACHERS.map(function(t){return '<div class="card t">'+(t.img?'<img src="'+t.img+'" alt="'+t.n+'" loading="lazy">':av)+'<b>'+t.n+'</b><small>'+t.s+'</small><small>'+t.d+'</small><button class="btn n" onclick="alert(\''+t.n+' ('+t.d+')\\n'+t.s+'\\n\\nProfile की जानकारी जल्द update होगी।\')">View Profile</button></div>'}).join("");
+$("tgrid").innerHTML=TEACHERS.map(function(t){return '<div class="card t">'+(t.img?'<img src="'+t.img+'" alt="'+t.n+'" loading="lazy" onerror="this.outerHTML=av">':av)+'<b>'+t.n+'</b><small>'+t.s+'</small><small>'+t.d+'</small><button class="btn n" onclick="alert(\''+t.n+' ('+t.d+')\\n'+t.s+'\\n\\nProfile की जानकारी जल्द update होगी।\')">View Profile</button></div>'}).join("");
 // gallery
 var cur=0,list=PHOTOS;
 function rg(c){list=PHOTOS.filter(function(p){return c==="all"||p.cat===c});$("gg").innerHTML=list.map(function(p,i){return '<figure><img src="'+p.src+'" alt="'+p.cap+'" loading="lazy" onclick="ol('+i+')"><figcaption>'+p.cap+'</figcaption></figure>'}).join("")}
@@ -292,7 +300,7 @@ rg("all");
 document.querySelectorAll(".pill:not(#gf) button").forEach(function(b){b.onclick=function(){b.parentNode.querySelectorAll("button").forEach(function(x){x.classList.remove("on")});b.classList.add("on")}});
 // stars
 var rating=0,sb=$("st").querySelectorAll("button");
-sb.forEach(function(b,i){b.onclick=function(){rating=i+1;sb.forEach(function(x,j){x.classList.toggle("on",j<=i)})}});
+sb.forEach(function(b,i){b.onclick=function(){rating=i+1;$("rt").textContent=rating+"/5";sb.forEach(function(x,j){x.classList.toggle("on",j<=i)})}});
 // forms
 function send(fd,cb){
  if(WEB3FORMS_KEY.indexOf("YOUR_")===0){cb(false,"Form अभी connect नहीं है। कृपया WhatsApp या Call करें।");return}
@@ -325,7 +333,7 @@ $("ff").onsubmit=function(e){
  var b=$("fb");b.disabled=true;b.textContent="भेज रहे हैं...";
  var fd=new FormData($("ff"));fd.append("subject","Feedback (PENDING REVIEW) - SOCIAL CLASSES");fd.append("rating",rating+"/5");
  send(fd,function(s,m){b.disabled=false;b.textContent="Submit Feedback";
-  if(s){$("fo").style.display="block";$("ff").reset();sb.forEach(function(x){x.classList.remove("on")});rating=0}else{$("fe1").textContent=m}});
+  if(s){$("fo").style.display="block";$("ff").reset();sb.forEach(function(x){x.classList.remove("on")});rating=0;$("rt").textContent=""}else{$("fe1").textContent=m}});
 };
 
 // ===== 3D / glass effects =====
@@ -333,10 +341,10 @@ $("ff").onsubmit=function(e){
  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
  if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add('in');io.unobserve(t);setTimeout(function(){t.classList.remove('rv','in');t.style.transitionDelay=''},900)}})},{threshold:.1});
-  document.querySelectorAll('.card,.empty,details,.gal figure').forEach(function(e,i){e.classList.add('rv');e.style.transitionDelay=(i%3)*70+'ms';io.observe(e)});
+  document.querySelectorAll('.card:not(.ff):not(.fb),.flip,.empty,details,.gal figure').forEach(function(e,i){e.classList.add('rv');e.style.transitionDelay=(i%3)*70+'ms';io.observe(e)});
  }
  if(matchMedia('(hover:hover)').matches){
-  document.querySelectorAll('.card:not(form)').forEach(function(c){
+  document.querySelectorAll('.card:not(form):not(.ff):not(.fb),.gal figure').forEach(function(c){
    c.classList.add('tilt');
    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(700px) rotateX('+(-y*8)+'deg) rotateY('+(x*8)+'deg) translateZ(6px)'});
    c.addEventListener('pointerleave',function(){c.style.transform=''});
